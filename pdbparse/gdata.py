@@ -12,7 +12,7 @@ gsym = Struct("global",
                 ULInt32("symtype"),
                 ULInt32("offset"),
                 ULInt16("segment"),
-                CString("name", encoding="utf8"),
+                CString("name"),
             
             ),
             0x1009 : Struct("data_v2",

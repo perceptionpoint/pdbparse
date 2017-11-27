@@ -1,7 +1,7 @@
 from construct import *
 from io import BytesIO
 
-_strarray = GreedyRange(CString("names", encoding="utf8"))
+_strarray = GreedyRange(CString("names"))
 
 class StringArrayAdapter(Adapter):
     def _encode(self,obj,context):
