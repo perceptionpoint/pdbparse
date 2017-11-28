@@ -3,9 +3,6 @@
 # Python 2 and 3
 from io import BytesIO
 
-# Python 2 and 3: forward-compatible
-from builtins import range 
-
 from construct import *
 
 _ALIGN = 4
