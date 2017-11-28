@@ -1040,7 +1040,7 @@ lfVTShape = Struct("lfVTShape",
     PadAlign,
 )
 
-Type = Debugger(Struct("type",
+Type = Struct("type",
     leaf_type,
     Switch("type_info", lambda ctx: ctx.leaf_type,
         {
@@ -1063,7 +1063,7 @@ Type = Debugger(Struct("type",
         },
         default = Pass,
     ),
-))
+)
 
 Types = Struct("types",
     ULInt16("length"),
