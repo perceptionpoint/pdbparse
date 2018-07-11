@@ -1180,7 +1180,10 @@ def resolve_typerefs(leaf, types, min):
             setattr(leaf, attr, newrefs)
         else:
             if ref < min:
-                setattr(leaf, attr, base_type._decode(ref,{}))
+                try:
+                    setattr(leaf, attr, base_type._decode(ref,{}))
+                except MappingError:
+                    setattr(leaf, attr, "UNKNOWN")
             elif ref >= min:
                 try:
                     setattr(leaf, attr, types[ref])
